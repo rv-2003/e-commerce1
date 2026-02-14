@@ -35,8 +35,7 @@ app.use("/api/upload", uploadRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/payment", paymentRoutes); // ✅ ADD THIS
 
-// ❌ REMOVE THIS (PayPal)
-// app.get("/api/config/paypal", ... )
+
 
 const __dirname = path.resolve();
 app.use("/uploads", express.static(path.join(__dirname + "/uploads")));
