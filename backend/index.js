@@ -4,9 +4,9 @@ import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
 import cookieParser from "cookie-parser";
-
+import cors from "cors";
 // Load env
-console.log("MONGO_URI:", process.env.MONGO_URI);
+
 
 // Utils
 import connectDB from "./config/db.js";
@@ -22,6 +22,15 @@ const port = process.env.PORT || 5000;
 connectDB();
 
 const app = express();
+
+
+// Allow frontend domain
+app.use(cors({
+  origin: "https://vercel.com/rohit-vijays-projects/e-commerce1",
+  credentials: true, // if you use cookies
+}));
+
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
