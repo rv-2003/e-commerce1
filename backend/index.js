@@ -26,7 +26,7 @@ const app = express();
 
 // Allow frontend domain
 app.use(cors({
-  origin: "https://e-commerce1-nine-theta.vercel.app",
+  origin: ["https://e-commerce1-nine-theta.vercel.app", "http://localhost:5173"], // Replace with your frontend URL
   credentials: true, // if you use cookies
 }));
 

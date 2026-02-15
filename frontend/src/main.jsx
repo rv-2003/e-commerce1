@@ -35,6 +35,7 @@ import Order from "./pages/Orders/Order.jsx";
 import OrderList from "./pages/Admin/OrderList.jsx";
 
 import AdminDashboard from "./pages/Admin/AdminDashboard.jsx";
+import UserOrder from "./pages/User/UserOrder.jsx";
 
 
 const loadRazorpayScript = () => {
@@ -57,6 +58,7 @@ const router = createBrowserRouter(
       <Route path="/product/:id" element={<ProductDetails />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/shop" element={<Shop />} />
+      <Route path="user-Orders" element={<UserOrder />} />
 
       {/* Registered users */}
       <Route path="" element={<PrivateRoute />}>
@@ -75,6 +77,7 @@ const router = createBrowserRouter(
         <Route path="product/update/:_id" element={<ProductUpdate />} />
         <Route path="orderlist" element={<OrderList />} />
         <Route path="dashboard" element={<AdminDashboard />} />
+        
       </Route>
     </Route>
   )
